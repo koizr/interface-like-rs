@@ -18,3 +18,8 @@ impl<L: Logger> App<L> {
 pub fn run<L: Logger>(logger: L) {
     App::new(logger).run();
 }
+
+// もしくは impl Trait で書くこともできる
+pub fn run_2(logger: impl Logger) {
+    App::new(logger).run();
+}
