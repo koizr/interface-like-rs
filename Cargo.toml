@@ -1,0 +1,19 @@
+[package]
+name = "interface-like-rs"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [
+    "logger",
+    "dynamic-lib",
+    "static-lib",
+]
+
+[features]
+log = ["static-lib/log"]
+
+[dependencies]
+logger = { path = "./logger" }
+dynamic-lib = { path = "./dynamic-lib" }
+static-lib = { path = "./static-lib" }
