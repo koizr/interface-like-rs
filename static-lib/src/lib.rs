@@ -14,6 +14,7 @@ impl<L: Logger> App<L> {
     }
 }
 
+// スマートポインタなどで包む必要はないが、型変数とトレイト境界を付ける必要がある
 pub fn run<L: Logger>(logger: L) {
     App::new(logger).run();
 }
